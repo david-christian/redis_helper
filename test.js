@@ -33,6 +33,7 @@ const redisHelper = new redisUtil(redisClient);
 const redisOriginal = redisClient
 
 router.get("/aaa", (req, res) => {
+    redisOriginal.set("davidKey", 1)
     res.status(200)
     return res.json({ok:1})
 })
